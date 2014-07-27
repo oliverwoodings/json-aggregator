@@ -1,0 +1,20 @@
+{
+  "name": "json-aggregator",
+  "version": "0.0.1",
+  "description": "Aggregates a set of similar JSON objects into a report on their schema.",
+  "main": "index.js",
+  "dependencies": {
+    "fast-csv": "~0.4.1",
+    "lodash": "~2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:oliverwoodings/json-aggregator.git"
+  },
+  "author": "Oliver Woodings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oliverwoodings/json-aggregator/issues"
+  },
+  "homepage": "https://github.com/oliverwoodings/json-aggregator"
+}
