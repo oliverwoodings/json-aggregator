@@ -33,56 +33,92 @@ console.log(aggregator.export());
 Here is the output of the above:
 
 ```javascript
-[{
-  "keys": [{
-    "path": ["type"],
-    "value": "type1"
-  }],
-  "attributes": {
-    "type": {
-      "path": ["type"],
-      "occurances": 3,
-      "sampleValue": "type1"
+{
+  occurances: 5,
+  attributes: {
+    type: {
+      path: ['type'],
+      occurances: 5,
+      sampleValue: 'type1',
+      types: ['string']
     },
-    "parameter1": {
-      "path": ["parameter1"],
-      "occurances": 3,
-      "sampleValue": true
+    parameter1: {
+      path: ['parameter1'],
+      occurances: 5,
+      sampleValue: true,
+      types: ['boolean', 'string']
     },
-    "parameter2": {
-      "path": ["parameter2"],
-      "occurances": 3,
-      "sampleValue": false
+    parameter2: {
+      path: ['parameter2'],
+      occurances: 5,
+      sampleValue: false,
+      types: ['boolean']
     },
-    "parameter3": {
-      "path": ["parameter3"],
-      "occurances": 1,
-      "sampleValue": 5
+    parameter3: {
+      path: ['parameter3'],
+      occurances: 1,
+      sampleValue: 5,
+      types: ['number']
     }
   },
-  "occurances": 3
-}, {
-  "keys": [{
-    "path": ["type"],
-    "value": "type2"
-  }],
-  "attributes": {
-    "type": {
-      "path": ["type"],
-      "occurances": 2,
-      "sampleValue": "type2"
-    },
-    "parameter1": {
-      "path": ["parameter1"],
-      "occurances": 2,
-      "sampleValue": false
-    },
-    "parameter2": {
-      "path": ["parameter2"],
-      "occurances": 2,
-      "sampleValue": false
+  groups: [{
+    keys: [{
+      path: ['type'],
+      value: 'type1'
+    }],
+    occurances: 3,
+    attributes: {
+      type: {
+        path: ['type'],
+        occurances: 3,
+        sampleValue: 'type1',
+        types: ['string']
+      },
+      parameter1: {
+        path: ['parameter1'],
+        occurances: 3,
+        sampleValue: true,
+        types: ['boolean']
+      },
+      parameter2: {
+        path: ['parameter2'],
+        occurances: 3,
+        sampleValue: false,
+        types: ['boolean']
+      },
+      parameter3: {
+        path: ['parameter3'],
+        occurances: 1,
+        sampleValue: 5,
+        types: ['number']
+      }
     }
-  },
-  "occurances": 2
-}]
+  }, {
+    keys: [{
+      path: ['type'],
+      value: 'type2'
+    }],
+    occurances: 2,
+    attributes: {
+      type: {
+        path: ['type'],
+        occurances: 2,
+        sampleValue: 'type2',
+        types: ['string']
+      },
+      parameter1: {
+        path: ['parameter1'],
+        occurances: 2,
+        sampleValue: false,
+        types: ['boolean', 'string']
+      },
+      parameter2: {
+        path: ['parameter2'],
+        occurances: 2,
+        sampleValue: false,
+        types: ['boolean']
+      }
+    }
+  }]
+}
 ```
