@@ -1,4 +1,5 @@
-var Aggregator = require("./lib/aggregator");
+var Aggregator = require("../lib/aggregator");
+var util = require("util");
 
 var aggregator = new Aggregator({
   groupBy: [
@@ -14,8 +15,6 @@ var sampleData = [
   { type: "type2", parameter1: true, parameter2: false }
 ];
 
-sampleData.forEach(function (obj) {
-  aggregator.process(obj);
-});
+sampleData.forEach(aggregator.process.bind(aggregator));
 
-console.log(JSON.stringify(aggregator.export()));
+console.log(util.inspect(aggregator.export(), false, null));
